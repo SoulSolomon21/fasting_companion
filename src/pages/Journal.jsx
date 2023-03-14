@@ -1,8 +1,13 @@
-import React from 'react'
+import React from 'react';
+import "../components/Journal.css";
 
 const Journal = () => {
   return (
-    <div>Journal</div>
+    <body>
+     <div className="main">
+      <button class="add-note" type="button">+</button>
+     </div>
+    </body>
   )
 }
 

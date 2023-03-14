@@ -1,0 +1,27 @@
+.main
+{
+    max-width: 960px;
+    margin:0px auto;
+    padding:0px 15px;
+    min-height: 100vh;
+}
+body{
+    background-color: #dde7e5;
+    margin : 0;
+}
+.add-note
+{
+    height:200px;
+    width: 200px;
+    border: none;
+    outline: black;
+    background : rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-size: 60px;
+    color:rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: background 0.2;
+}
+.add-note:hover{
+    background : rgba(0, 0, 0, 0.2);
+}
