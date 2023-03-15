@@ -2,7 +2,12 @@ import React from 'react';
 import "./Journal.css";
 
 const Journal = () => {
-  
+   
+    const addButton = document.getElementById('button');
+    addButton.addEventListener('click', ()=> {
+      addButton.createElement('textarea');
+    });
+
   return (
     <>
      <body>
