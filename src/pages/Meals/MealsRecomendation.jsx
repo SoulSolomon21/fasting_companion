@@ -68,7 +68,7 @@ const MealsRecomendation = () => {
         })}
       </section> */}
       <OverflowCard className="card"/>
-      <OverflowCard className="card"/>
+      {/* <OverflowCard className="card"/> */}
     </div>
   )
 }
