@@ -9,13 +9,19 @@ import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
-import { Link, Outlet } from 'react-router-dom';
+import ListItemText from '@mui/material/ListItemText';
+import { Link, Outlet, useNavigate } from 'react-router-dom';
 
 
 const drawerWidth = 240;
 
 export default function ClippedDrawer() {
+  const navigate = useNavigate()
 
+  const handleClick = path => e => {
+    e.preventDefault()
+    navigate(`/${path}`)
+  }
 
 
   return (
@@ -40,32 +46,32 @@ export default function ClippedDrawer() {
         <Box sx={{ overflow: 'auto' }}>
           <List>
             <ListItem disablePadding>
-              <ListItemButton>
-                <Link to="/">Dashboard</Link>
+              <ListItemButton onClick={handleClick("")}>
+                <ListItemText primary="Dashboard" />
               </ListItemButton>
             </ListItem>
             <Divider />
             <ListItem disablePadding>
-              <ListItemButton>
-                <Link to="/calendar">Calendar</Link>
+              <ListItemButton onClick={handleClick("calendar")}>
+              <ListItemText primary="Calendar" />              
               </ListItemButton>
             </ListItem>
             <Divider />
             <ListItem disablePadding>
-              <ListItemButton>
-                <Link to="/journal">Journal</Link>
+              <ListItemButton onClick={handleClick("journal")}>
+              <ListItemText primary="Journal" />              
               </ListItemButton>
             </ListItem>
             <Divider />
             <ListItem disablePadding>
-              <ListItemButton>
-                <Link to="/mealsRecommendation">Meals Recommendation</Link>
+              <ListItemButton onClick={handleClick("mealsRecommendation")}>
+              <ListItemText primary="Meals Recommendation" />              
               </ListItemButton>
             </ListItem>
             <Divider />
             <ListItem disablePadding>
-              <ListItemButton>
-                <Link to="/account">Account</Link>
+              <ListItemButton onClick={handleClick("account")}>
+              <ListItemText primary="Account" />              
               </ListItemButton>
             </ListItem>
             <Divider />
