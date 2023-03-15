@@ -8,10 +8,4 @@
 
 }
 
-@media screen and (max-width: 600px) {
-    .container {
-        display: flex;
-        flex-direction: column;
-    }
-}
     
