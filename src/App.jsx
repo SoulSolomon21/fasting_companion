@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import './App.css'
 import ClippedDrawer from './components/ClippedDrawer'
-import Account from './pages/Account'
-import Calendar from './pages/Calendar'
-import Dashboard from './pages/Dashboard'
-import MealsRecomendation from './pages/MealsRecomendation'
-import Journal from './pages/Journal'
+import Account from './pages/Account/Account'
+import Calendar from './pages/Calendar/Calendar'
+import Dashboard from './pages/Dashboard/Dashboard'
+import MealsRecomendation from './pages/Meals/MealsRecomendation'
+import Journal from './pages/Journal/Journal'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 function App() {
