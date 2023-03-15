@@ -1,5 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import OverflowCard from './OverflowCard'
+import './meals.css'
 
 const breakfastMeals = 'https://www.themealdb.com/api/json/v1/1/search.php?s=breakfast'
 const supperMeals = 'https://www.themealdb.com/api/json/v1/1/search.php?s=supper'
@@ -42,8 +44,8 @@ const MealsRecomendation = () => {
 
 
   return (
-    <div>
-      <section>
+    <div className="container">
+      {/* <section>
         {breakfast.map((meal) => {
           const {idmeal, strMeal:title,strMealThumb:image} = meal
           return <article key={idmeal}>
@@ -64,7 +66,9 @@ const MealsRecomendation = () => {
             </footer>
           </article>
         })}
-      </section>
+      </section> */}
+      <OverflowCard className="card"/>
+      <OverflowCard className="card"/>
     </div>
   )
 }
