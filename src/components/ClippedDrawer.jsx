@@ -23,7 +23,6 @@ export default function ClippedDrawer() {
     navigate(`/${path}`)
   }
 
-
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
@@ -85,5 +84,3 @@ export default function ClippedDrawer() {
     </Box>
   );
 }
-//  add onclich handler that takes in the path to the componenet
-// and maybe have the link in the on click handler
