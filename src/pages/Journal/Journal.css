@@ -1,6 +1,6 @@
 .main
 {
-    max-width: 960px;
+    max-width: 900px;
     margin:0px auto;
     padding:0px 15px;
     min-height: 100vh;
@@ -9,7 +9,7 @@ body{
     background-color: #dde7e5;
     margin : 0;
 }
-.add-note
+.addNote
 {
     height:200px;
     width: 200px;
@@ -19,9 +19,28 @@ body{
     border-radius: 10px;
     font-size: 60px;
     color:rgba(0, 0, 0, 0.5);
-    cursor: pointer;
+    cursor:grab;
     transition: background 0.2;
 }
-.add-note:hover{
+.addNote:hover{
     background : rgba(0, 0, 0, 0.2);
+}
+.note
+{
+    height : 200px;
+    box-sizing: border-box;
+    padding: 16px;
+    border: none;
+    border-radius : 10px;
+    box-shadow: 0 0 7px rgba(0,0,0,0.15);
+    resize: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size : 16px;
+}
+#feature
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    padding: 24px;
+    gap: 24px;
 }
