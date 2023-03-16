@@ -19,7 +19,7 @@ body{
     border-radius: 10px;
     font-size: 60px;
     color:rgba(0, 0, 0, 0.5);
-    cursor: pointer;
+    cursor:grab;
     transition: background 0.2;
 }
 .addNote:hover{
