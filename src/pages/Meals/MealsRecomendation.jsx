@@ -4,7 +4,7 @@ import OverflowCard from './OverflowCard'
 import './meals.css'
 
 const breakfastMeals = 'https://www.themealdb.com/api/json/v1/1/search.php?s=breakfast'
-const supperMeals = 'https://www.themealdb.com/api/json/v1/1/search.php?s=supper'
+const supperMeals = 'https://www.themealdb.com/api/json/v1/1/search.php?s=beef'
 
 const MealsRecomendation = () => {
   const [breakfast, setBreakfast] = useState([])
@@ -45,30 +45,29 @@ const MealsRecomendation = () => {
 
   return (
     <div className="container">
-      {/* <section>
-        {breakfast.map((meal) => {
-          const {idmeal, strMeal:title,strMealThumb:image} = meal
-          return <article key={idmeal}>
-            <img src={image}/>
-            <footer>
-              <h5>{title}</h5>
-            </footer>
-          </article>
+      <section className='breakfastMeals'>
+        {breakfast.map((meal,key) => {
+          const {idmeal, strMeal:title,strMealThumb:image,strSource:link} = meal
+          return <OverflowCard 
+          key={idmeal}
+          name={title}
+          imageThumb={image}
+          link={link}
+          />
         })}
       </section>
-      <section>
-        {supper.map((meal) => {
-          const {idMeal, strMeal:title,strMealThumb:image} = meal
-          return <article key={idMeal}>
-            <img src={image} />
-            <footer>
-              <h5>{title}</h5>
-            </footer>
-          </article>
+      <section className='supperMeals'>
+        {supper.map((meal,key) => {
+          const {idMeal, strMeal:title,strMealThumb:image,strSource:link} = meal
+          return <OverflowCard 
+          key={idMeal}
+          name={title}
+          imageThumb={image}
+          link={link}
+          />
         })}
-      </section> */}
-      <OverflowCard className="card"/>
-      <OverflowCard className="card"/>
+      </section>
+      {/* <OverflowCard className="card" /> */}
     </div>
   )
 }
