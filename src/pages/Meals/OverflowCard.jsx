@@ -5,24 +5,20 @@ import CardOverflow from '@mui/joy/CardOverflow';
 import Divider from '@mui/joy/Divider';
 import Typography from '@mui/joy/Typography';
 
-export default function OverflowCard() {
+export default function OverflowCard({name, link, imageThumb}) {
   return (
-    <Card variant="outlined" sx={{ width: 320 }}>
+    <Card variant="outlined" sx={{ width: 320,mt: 2,mb: 2, ml:2 }}>
       <CardOverflow>
         <AspectRatio ratio="2">
           <img
-            src="https://images.unsplash.com/photo-1532614338840-ab30cf10ed36?auto=format&fit=crop&w=318"
-            srcSet="https://images.unsplash.com/photo-1532614338840-ab30cf10ed36?auto=format&fit=crop&w=318&dpr=2 2x"
+            src={imageThumb}
             loading="lazy"
             alt=""
           />
         </AspectRatio>
       </CardOverflow>
-      <Typography level="h2" sx={{ fontSize: 'md', mt: 2 }}>
-        Yosemite National Park
-      </Typography>
-      <Typography level="body2" sx={{ mt: 0.5, mb: 2 }}>
-        California
+      <Typography level="h2" sx={{ fontSize: 'md', mt: 2,mb: 2 }}>
+        {name}
       </Typography>
       <Divider />
       <CardOverflow
@@ -36,12 +32,12 @@ export default function OverflowCard() {
         }}
       >
         <Typography level="body3" sx={{ fontWeight: 'md', color: 'text.secondary' }}>
-          6.3k views
+          <a href={link} target='_blank'>View recipe</a>
         </Typography>
-        <Divider orientation="vertical" />
+        {/* <Divider orientation="vertical" />
         <Typography level="body3" sx={{ fontWeight: 'md', color: 'text.secondary' }}>
           1 hour ago
-        </Typography>
+        </Typography> */}
       </CardOverflow>
     </Card>
   );
