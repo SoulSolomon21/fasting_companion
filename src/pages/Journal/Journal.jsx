@@ -1,8 +1,7 @@
-import React from 'react';
+import React, { createElement, useState } from 'react';
 import "./Journal.css";
 
 const Journal = () => {
-  
   return (
     <>
      <body>
