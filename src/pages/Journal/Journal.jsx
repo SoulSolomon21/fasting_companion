@@ -5,9 +5,32 @@ const Journal = () => {
   return (
     <>
      <body>
-      <div id='feature' className="main">
-       <button class="addNote" id="button">+</button>
-      </div>
+      <ul>
+        <li>
+          <a href ="#" contentEditable>
+            <h2> Week #1 </h2>
+            <p> Your Thoughts </p>
+          </a>
+        </li>
+        <li>
+          <a href= "#" contentEditable>
+            <h2> Week #2 </h2>
+            <p> Your Thoughts </p>
+          </a>
+        </li>
+        <li>
+          <a href = "#" contentEditable>
+            <h2> Week #3 </h2>
+            <p> Your Thoughts </p>
+          </a>
+        </li>
+        <li>
+          <a href="#" contentEditable>
+            <h2> Week #4 </h2>
+            <p> Your Thoughts </p>
+          </a>
+        </li>
+        </ul>
      </body>
     </>
 
