@@ -3,22 +3,22 @@ import "./Journal.css";
 
 const Journal = () => {
   return (
-     <div>
+    <div>
       <ul>
         <li>
-          <a href ="#">
+          <a href="#">
             <h2> Week #1 </h2>
             <p> Your Thoughts </p>
           </a>
         </li>
         <li>
-          <a href= "#">
+          <a href="#">
             <h2> Week #2 </h2>
             <p> Your Thoughts </p>
           </a>
         </li>
         <li>
-          <a href = "#">
+          <a href="#">
             <h2> Week #3 </h2>
             <p> Your Thoughts </p>
           </a>
@@ -29,8 +29,8 @@ const Journal = () => {
             <p> Your Thoughts </p>
           </a>
         </li>
-        </ul>
-     </div>
+      </ul>
+    </div>
   )
 }
 
