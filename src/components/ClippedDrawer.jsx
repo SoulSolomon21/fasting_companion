@@ -36,6 +36,7 @@ export default function ClippedDrawer() {
       <Drawer
         variant="permanent"
         sx={{
+          // display: "none",
           width: drawerWidth,
           flexShrink: 0,
           [`& .MuiDrawer-paper`]: { width: drawerWidth, boxSizing: 'border-box' },
