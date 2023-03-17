@@ -1,24 +1,24 @@
-h2
+.h2style 
 {
     font-weight: bold;
     font-size: 2rem;
 }
-p
+.pstyle 
 {
     font-size: 1rem;
     font-weight: normal;
 }
-ul,li
+.ulstyle .listyle 
 {
     list-style:none;
 }
-ul
+.ulstyle 
 {
     display : flex;
     flex-wrap: wrap;
     justify-content:center;
 }
-ul li a
+.ulstyle .listyle .astyle 
 {
     text-decoration: dotted;
     color : #1a0606;
@@ -28,6 +28,6 @@ ul li a
     width:20em;
     padding:1em;
 }
-ul li{
+.ulstyle .listyle {
     margin : 1em;
-}
+} 
