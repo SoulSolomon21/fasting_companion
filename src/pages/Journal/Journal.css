@@ -1,46 +1,33 @@
-.main
+h2
 {
-    max-width: 900px;
-    margin:0px auto;
-    padding:0px 15px;
-    min-height: 100vh;
+    font-weight: bold;
+    font-size: 2rem;
 }
-body{
-    background-color: #dde7e5;
-    margin : 0;
-}
-.addNote
+p
 {
-    height:200px;
-    width: 200px;
-    border: none;
-    outline: black;
-    background : rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    font-size: 60px;
-    color:rgba(0, 0, 0, 0.5);
-    cursor:grab;
-    transition: background 0.2;
+    font-size: 1rem;
+    font-weight: normal;
 }
-.addNote:hover{
-    background : rgba(0, 0, 0, 0.2);
-}
-.note
+ul,li
 {
-    height : 200px;
-    box-sizing: border-box;
-    padding: 16px;
-    border: none;
-    border-radius : 10px;
-    box-shadow: 0 0 7px rgba(0,0,0,0.15);
-    resize: none;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size : 16px;
+    list-style:none;
 }
-#feature
+ul
 {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 200px);
-    padding: 24px;
-    gap: 24px;
+    display : flex;
+    flex-wrap: wrap;
+    justify-content:center;
+}
+ul li a
+{
+    text-decoration: dotted;
+    color : #1a0606;
+    background: rgb(211, 211, 108);
+    display: block;
+    height: 20em;
+    width:20em;
+    padding:1em;
+}
+ul li{
+    margin : 1em;
 }
