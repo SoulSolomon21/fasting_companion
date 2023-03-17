@@ -4,7 +4,7 @@ import OverflowCard from './OverflowCard'
 import './meals.css'
 
 const breakfastMeals = 'https://www.themealdb.com/api/json/v1/1/search.php?s=breakfast'
-const supperMeals = 'https://www.themealdb.com/api/json/v1/1/search.php?s=beef'
+const supperMeals = 'https://www.themealdb.com/api/json/v1/1/search.php?s='
 
 const MealsRecomendation = () => {
   const [breakfast, setBreakfast] = useState([])
@@ -68,7 +68,6 @@ const MealsRecomendation = () => {
           />
         })}
       </section>
-      {/* <OverflowCard className="card" /> */}
     </div>
   )
 }
