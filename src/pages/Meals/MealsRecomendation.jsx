@@ -11,24 +11,24 @@ const MealsRecomendation = () => {
   const [supper, setSupper] = useState([])
 
   const fetchBreakfast = async () => {
-    try{
-      const {data} = await axios(breakfastMeals)
+    try {
+      const { data } = await axios(breakfastMeals)
       if (data.meals) {
         setBreakfast(data.meals)
-      }else {
+      } else {
         setBreakfast([])
       }
-    } catch (e){
+    } catch (e) {
       console.log(e.response);
     }
   }
 
   const fetchSupper = async () => {
     try {
-      const {data} = await axios(supperMeals)
-      if(data.meals) {
+      const { data } = await axios(supperMeals)
+      if (data.meals) {
         setSupper(data.meals)
-      }else{
+      } else {
         setSupper([])
       }
     } catch (e) {
@@ -40,30 +40,30 @@ const MealsRecomendation = () => {
     fetchSupper()
     fetchBreakfast()
   }, [])
-  
+
 
 
   return (
     <div className="container">
       <section className='breakfastMeals'>
-        {breakfast.map((meal,key) => {
-          const {idmeal, strMeal:title,strMealThumb:image,strSource:link} = meal
-          return <OverflowCard 
-          key={idmeal}
-          name={title}
-          imageThumb={image}
-          link={link}
+        {breakfast.map((meal, key) => {
+          const { idmeal, strMeal: title, strMealThumb: image, strSource: link } = meal
+          return <OverflowCard
+            key={idmeal}
+            name={title}
+            imageThumb={image}
+            link={link}
           />
         })}
       </section>
       <section className='supperMeals'>
-        {supper.map((meal,key) => {
-          const {idMeal, strMeal:title,strMealThumb:image,strSource:link} = meal
-          return <OverflowCard 
-          key={idMeal}
-          name={title}
-          imageThumb={image}
-          link={link}
+        {supper.map((meal, key) => {
+          const { idMeal, strMeal: title, strMealThumb: image, strSource: link } = meal
+          return <OverflowCard
+            key={idMeal}
+            name={title}
+            imageThumb={image}
+            link={link}
           />
         })}
       </section>

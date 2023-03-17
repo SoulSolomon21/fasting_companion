@@ -52,25 +52,25 @@ export default function ClippedDrawer() {
             <Divider />
             <ListItem disablePadding>
               <ListItemButton onClick={handleClick("calendar")}>
-              <ListItemText primary="Calendar" />              
+                <ListItemText primary="Calendar" />
               </ListItemButton>
             </ListItem>
             <Divider />
             <ListItem disablePadding>
               <ListItemButton onClick={handleClick("journal")}>
-              <ListItemText primary="Journal" />              
+                <ListItemText primary="Journal" />
               </ListItemButton>
             </ListItem>
             <Divider />
             <ListItem disablePadding>
               <ListItemButton onClick={handleClick("mealsRecommendation")}>
-              <ListItemText primary="Meals Recommendation" />              
+                <ListItemText primary="Meals Recommendation" />
               </ListItemButton>
             </ListItem>
             <Divider />
             <ListItem disablePadding>
               <ListItemButton onClick={handleClick("account")}>
-              <ListItemText primary="Account" />              
+                <ListItemText primary="Account" />
               </ListItemButton>
             </ListItem>
             <Divider />

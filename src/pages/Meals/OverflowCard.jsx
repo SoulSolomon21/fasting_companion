@@ -5,9 +5,9 @@ import CardOverflow from '@mui/joy/CardOverflow';
 import Divider from '@mui/joy/Divider';
 import Typography from '@mui/joy/Typography';
 
-export default function OverflowCard({name, link, imageThumb}) {
+export default function OverflowCard({ name, link, imageThumb }) {
   return (
-    <Card variant="outlined" sx={{ width: 320,mt: 2,mb: 2, ml:2 }}>
+    <Card variant="outlined" sx={{ width: 320, mt: 2, mb: 2, ml: 2 }}>
       <CardOverflow>
         <AspectRatio ratio="2">
           <img
@@ -17,7 +17,7 @@ export default function OverflowCard({name, link, imageThumb}) {
           />
         </AspectRatio>
       </CardOverflow>
-      <Typography level="h2" sx={{ fontSize: 'md', mt: 2,mb: 2 }}>
+      <Typography level="h2" sx={{ fontSize: 'md', mt: 2, mb: 2 }}>
         {name}
       </Typography>
       <Divider />
@@ -34,10 +34,6 @@ export default function OverflowCard({name, link, imageThumb}) {
         <Typography level="body3" sx={{ fontWeight: 'md', color: 'text.secondary' }}>
           <a href={link} target='_blank'>View recipe</a>
         </Typography>
-        {/* <Divider orientation="vertical" />
-        <Typography level="body3" sx={{ fontWeight: 'md', color: 'text.secondary' }}>
-          1 hour ago
-        </Typography> */}
       </CardOverflow>
     </Card>
   );
