@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { createElement, useState } from 'react';
 import "./Journal.css";
 
 const Journal = () => {
   return (
-    <body>
-     <div className="main">
-      <button class="add-note" type="button">+</button>
-     </div>
-    </body>
+    <>
+     <body>
+      <div id='feature' className="main">
+       <button class="addNote" id="button">+</button>
+      </div>
+     </body>
+    </>
+
+
   )
 }
 
