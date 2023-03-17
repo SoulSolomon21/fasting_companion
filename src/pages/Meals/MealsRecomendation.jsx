@@ -15,6 +15,7 @@ const MealsRecomendation = () => {
       const {data} = await axios(breakfastMeals)
       if (data.meals) {
         setBreakfast(data.meals)
+        console.log(data.meals);
       }else {
         setBreakfast([])
       }
@@ -41,15 +42,14 @@ const MealsRecomendation = () => {
     fetchBreakfast()
   }, [])
   
-
-
   return (
     <div className="container">
       <section className='breakfastMeals'>
-        {breakfast.map((meal,key) => {
-          const {idmeal, strMeal:title,strMealThumb:image,strSource:link} = meal
+        <h1>Breakfast</h1>
+        {breakfast.map((meal) => {
+          const {idMeal, strMeal:title,strMealThumb:image,strSource:link} = meal
           return <OverflowCard 
-          key={idmeal}
+          key={idMeal}
           name={title}
           imageThumb={image}
           link={link}
@@ -57,7 +57,8 @@ const MealsRecomendation = () => {
         })}
       </section>
       <section className='supperMeals'>
-        {supper.map((meal,key) => {
+        <h1>Supper</h1>
+        {supper.slice(0,5).map((meal) => {
           const {idMeal, strMeal:title,strMealThumb:image,strSource:link} = meal
           return <OverflowCard 
           key={idMeal}
