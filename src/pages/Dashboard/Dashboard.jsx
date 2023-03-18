@@ -15,8 +15,9 @@ function Dashboard() {
 
   return (
     <div>
+        <h1>{daysCompleted} days completed out of 30</h1>
       <Versecard />
-      <p>{daysCompleted} days completed out of 30</p>
+    
     </div>
   );
 }
