@@ -1,44 +1,32 @@
 import React, { useState, useEffect } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import { LinearProgress, Typography } from '@material-ui/core';
-import { Event } from '@material-ui/icons';
 
-const useStyles = makeStyles({
-  root: {
-    flexGrow: 1,
-    marginTop: '20px',
-  },
-  icon: {
-    marginRight: '10px',
-  },
-});
-
-const Dashboard = () => {
-  const classes = useStyles();
-  const [daysRemaining, setDaysRemaining] = useState(30);
+const ProgressBar = () => {
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setDaysRemaining(daysRemaining => daysRemaining - 1);
-    }, 1000 * 60 * 60 * 24); // update every day
+    const startDate = new Date();
+    const endDate = new Date(startDate.getTime() + 30 * 24 * 60 * 60 * 1000);
+    const totalDuration = endDate.getTime() - startDate.getTime();
+    const intervalId = setInterval(() => {
+      const currentTime = new Date().getTime();
+      const elapsedTime = currentTime - startDate.getTime();
+      const currentProgress = (elapsedTime / totalDuration) * 100;
+      setProgress(currentProgress > 100 ? 100 : currentProgress);
+      if (currentProgress >= 100) {
+        clearInterval(intervalId);
+      }
+    }, 1000);
 
-    return () => clearInterval(interval);
+    return () => {
+      clearInterval(intervalId);
+    };
   }, []);
 
-  const progressPercentage = Math.round(((30 - daysRemaining) / 30) * 100);
-
   return (
-    <div className={classes.root}>
-      <Typography variant="h6" gutterBottom>
-        <Event className={classes.icon} />
-        Countdown Progress
-      </Typography>
-      <LinearProgress variant="determinate" value={progressPercentage} />
-      <Typography variant="caption" gutterBottom>
-        {daysRemaining} days remaining
-      </Typography>
+    <div className="progress-bar">
+      <div className="progress" style={{ width: `${progress}%`, height: '20px', backgroundColor: '#4CAF50', borderRadius: '10px' }}></div>
     </div>
   );
 };
 
-export default Dashboard;
+export default ProgressBar;
