@@ -30,11 +30,8 @@ const Journal = () => {
             <p class='pstyle'> Your Thoughts </p>
           </a>
         </li>
-        </ul>
-     </body>
-    </>
-
-
+      </ul>
+    </div>
   )
 }
 

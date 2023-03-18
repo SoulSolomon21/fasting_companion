@@ -23,7 +23,6 @@ export default function ClippedDrawer() {
     navigate(`/${path}`)
   }
 
-
   return (
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
@@ -37,6 +36,7 @@ export default function ClippedDrawer() {
       <Drawer
         variant="permanent"
         sx={{
+          // display: "none",
           width: drawerWidth,
           flexShrink: 0,
           [`& .MuiDrawer-paper`]: { width: drawerWidth, boxSizing: 'border-box' },
@@ -85,5 +85,3 @@ export default function ClippedDrawer() {
     </Box>
   );
 }
-//  add onclich handler that takes in the path to the componenet
-// and maybe have the link in the on click handler

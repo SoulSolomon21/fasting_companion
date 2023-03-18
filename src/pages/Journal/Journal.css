@@ -16,12 +16,12 @@
 {
     display : flex;
     flex-wrap: wrap;
-    justify-content:center;
+    justify-content: center;
 }
 .ulstyle .listyle .astyle 
 {
     text-decoration: dotted;
-    color : #1a0606;
+    color: #1a0606;
     background: rgb(211, 211, 108);
     display: block;
     height: 20em; 
