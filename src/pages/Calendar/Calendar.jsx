@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 
 function MyCalendar() {
   const [date, setDate] = useState(new Date());
-  
+
   const handleDateChange = (newDate) => {
     setDate(newDate);
   };
@@ -16,9 +16,9 @@ function MyCalendar() {
       return '';
     }
   };
-  
+
   return (
-    <div style={{ height: '500px',width: '1000px' }}>
+    <div style={{ height: '500px', width: '1000px' }}>
       <h1>Companion Calendar</h1>
       <Calendar
         value={date}

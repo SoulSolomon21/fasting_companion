@@ -3,15 +3,34 @@ import "./Journal.css";
 
 const Journal = () => {
   return (
-    <>
-     <body>
-      <div id='feature' className="main">
-       <button class="addNote" id="button">+</button>
-      </div>
-     </body>
-    </>
-
-
+    <div>
+      <ul>
+        <li>
+          <a href="#">
+            <h2> Week #1 </h2>
+            <p> Your Thoughts </p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <h2> Week #2 </h2>
+            <p> Your Thoughts </p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <h2> Week #3 </h2>
+            <p> Your Thoughts </p>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <h2> Week #4 </h2>
+            <p> Your Thoughts </p>
+          </a>
+        </li>
+      </ul>
+    </div>
   )
 }
 
