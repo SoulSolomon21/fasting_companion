@@ -1,27 +1,42 @@
-.main
+.h2style 
 {
-    max-width: 960px;
-    margin:0px auto;
-    padding:0px 15px;
-    min-height: 100vh;
+    font-weight: bold;
+    font-size: 2rem;
 }
-body{
-    background-color: #dde7e5;
-    margin : 0;
-}
-.add-note
+.pstyle 
 {
-    height:200px;
-    width: 200px;
-    border: none;
-    outline: black;
-    background : rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    font-size: 60px;
-    color:rgba(0, 0, 0, 0.5);
-    cursor: pointer;
-    transition: background 0.2;
+    font-size: 1rem;
+    font-weight: normal;
 }
-.add-note:hover{
-    background : rgba(0, 0, 0, 0.2);
+.ulstyle .listyle 
+{
+    list-style:none;
+}
+.ulstyle 
+{
+    display : flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.ulstyle .listyle .astyle 
+{
+    text-decoration: dotted;
+    color: #1a0606;
+    background: rgb(211, 211, 108);
+    display: block;
+    height: 20em; 
+    width:20em;
+    padding:1em;
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    transition: transform .15s linear;
+}
+.ulstyle .listyle {
+    margin : 1em;
+} 
+
+.ulstyle .listyle .astyle:hover, .ulstyle .listyle .astyle:focus{
+    box-shadow: 10px 10px 7px rgba(0,0,0,.7);
+    transform: scale(1.25);
+    position: relative;
+    z-index:5;
 }
