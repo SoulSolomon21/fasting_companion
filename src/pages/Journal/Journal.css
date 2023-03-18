@@ -1,34 +1,33 @@
-h2 {
+.h2style 
+{
     font-weight: bold;
     font-size: 2rem;
 }
-
-p {
+.pstyle 
+{
     font-size: 1rem;
     font-weight: normal;
 }
-
-ul,
-li {
-    list-style: none;
+.ulstyle .listyle 
+{
+    list-style:none;
 }
-
-ul {
-    display: flex;
+.ulstyle 
+{
+    display : flex;
     flex-wrap: wrap;
     justify-content: center;
 }
-
-ul li a {
+.ulstyle .listyle .astyle 
+{
     text-decoration: dotted;
     color: #1a0606;
     background: rgb(211, 211, 108);
     display: block;
-    height: 20em;
-    width: 20em;
-    padding: 1em;
+    height: 20em; 
+    width:20em;
+    padding:1em;
 }
-
-ul li {
-    margin: 1em;
-}
+.ulstyle .listyle {
+    margin : 1em;
+} 
