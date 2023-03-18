@@ -1,5 +1,6 @@
 import React from 'react';
 import Versecard from './Versecard';
+import ProgressBar from './progressbar';
 
 function Dashboard() {
   const [daysCompleted, setDaysCompleted] = React.useState(0);
@@ -15,9 +16,10 @@ function Dashboard() {
 
   return (
     <div>
-        <h1>{daysCompleted} days completed out of 30</h1>
+      <ProgressBar />
+      <h1>{daysCompleted} days completed out of 30</h1>
       <Versecard />
-    
+
     </div>
   );
 }
