@@ -3,8 +3,7 @@ import "./Journal.css";
 
 const Journal = () => {
   return (
-    <>
-     <body>
+    <div>
       <ul class='ulstyle'>
         <li class='listyle'>
           <a class='astyle' href ="#" contentEditable>
