@@ -27,8 +27,8 @@ function MyCalendar() {
       />
       <style>{`
         .today {
-          background-color: red;
-          color: white;
+          background-color: #ffffe0;
+          color: #ADD8E6;
         }
       `}</style>
     </div>
