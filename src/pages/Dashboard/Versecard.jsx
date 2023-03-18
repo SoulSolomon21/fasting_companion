@@ -34,7 +34,7 @@ export default function BasicCard() {
 
 
   return (
-    <Card variant="outlined" sx={{ width: 320 }}>
+    <Card variant="outlined" sx={{ width: 320 ,margin: '0 auto'}}>
       <Typography level="h2" fontSize="md" sx={{ mb: 0.5 }}>
         {surah}:{ayah}
       </Typography>

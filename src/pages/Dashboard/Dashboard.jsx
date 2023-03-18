@@ -1,6 +1,7 @@
 import React from 'react';
 import Versecard from './Versecard';
 import ProgressBar from './progressbar';
+import './dashboard.css'
 
 function Dashboard() {
   const [daysCompleted, setDaysCompleted] = React.useState(0);
@@ -18,8 +19,9 @@ function Dashboard() {
     <div>
       <ProgressBar />
       <h1>{daysCompleted} days completed out of 30</h1>
-      <Versecard />
-
+      <div className="verses">
+      <Versecard/>
+      </div>
     </div>
   );
 }
