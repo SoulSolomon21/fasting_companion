@@ -2,6 +2,22 @@ import React, { createElement, useState } from 'react';
 import "./Journal.css";
 
 const Journal = () => {
+
+  all_notes = $('li a'); //$ is a shortcut or other meaning for jQuery function
+  
+  all_notes.on('keyup', function() {
+    note_title = $(this).find('h2').text();
+    note_content = $(this).find('p').text();
+
+    item_key = 'list_'+$(this).parent().index();
+
+    data = {
+      title:note_title,
+      content: note_content
+    };
+    window.localStorage.setItem(item_key, JSON.stringify(data));
+  });
+
   return (
     <div>
       <ul class='ulstyle'>
