@@ -7,6 +7,21 @@ const AppProvider = ({ children }) => {
     const [verseText, setVerseText] = useState('');
     const [surah, setSurah] = useState('')
     const [ayah, setAyah] = useState('')
+    const [schedule, setSchedule] = useState([]);
+
+    useEffect(() => {
+        axios
+            .get(
+                "https://api.aladhan.com/v1/calendarByCity?city=Mukono&country=Uganda&method=1&month=4&year=2023"
+            )
+            .then((response) => {
+                setSchedule(response.data.data);
+                console.log(response.data.data);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    }, []);
 
     function fetchVerse() {
         axios.get('https://api.quran.com/api/v4/verses/random?language=en&words=true') //api request using the axios library
@@ -48,7 +63,8 @@ const AppProvider = ({ children }) => {
     return <AppContext.Provider value={{
         ayah,
         surah,
-        verseText
+        verseText,
+        schedule
     }}>
         {children}
     </AppContext.Provider>
