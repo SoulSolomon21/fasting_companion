@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Versecard from './Versecard';
-import ProgressBar from './progressbar';
+import ProgressBar from './Progressbar';
 import './dashboard.css'
 
 function Dashboard() {
@@ -8,11 +8,15 @@ function Dashboard() {
 
   // calculate the number of days completed out of 30
   useEffect(() => {
-    const dateStarted = new Date('2023-03-01'); // replace with actual start date
+    const dateStarted = new Date('2023-03-23'); // replace with actual start date
     const today = new Date();
     const daysElapsed = Math.floor((today - dateStarted) / (1000 * 60 * 60 * 24));
     const daysCompleted = daysElapsed > 30 ? 30 : daysElapsed;
-    setDaysCompleted(daysCompleted);
+    if (daysCompleted > 0) {
+      setDaysCompleted(daysCompleted);
+    } else {
+      setDaysCompleted(0);
+    }
   }, []);
 
 
