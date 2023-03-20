@@ -36,7 +36,7 @@ const AppProvider = ({ children }) => {
             // Make the API call
             fetchVerse()
             localStorage.setItem('lastApiCallDate', currentDate);
-        } else  if (lastApiCallDate === currentDate){
+        } else if (lastApiCallDate === currentDate) {
             const verseFromStorage = JSON.parse(localStorage.getItem("verseToday"))
             const verseDataFromStorage = JSON.parse(localStorage.getItem('verseData'))
             setSurah(verseDataFromStorage[0]);
@@ -59,5 +59,3 @@ export const useGlobalContext = () => {
 }
 
 export { AppContext, AppProvider }
-
-
