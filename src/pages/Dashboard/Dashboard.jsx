@@ -3,9 +3,6 @@ import Versecard from './Versecard';
 import ProgressBar from './progressbar';
 import './dashboard.css'
 
-
-
-
 function Dashboard() {
   const [daysCompleted, setDaysCompleted] = useState(0);
 
