@@ -15,6 +15,7 @@ function Dashboard() {
     setDaysCompleted(daysCompleted);
   }, []);
 
+
   return (
     <div>
       <ProgressBar />
