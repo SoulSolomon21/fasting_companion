@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Versecard from './Versecard';
-import ProgressBar from './Progressbar';
+import ProgressBar from './progressbar';
 import './dashboard.css'
 
 function Dashboard() {
