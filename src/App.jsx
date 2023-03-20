@@ -1,7 +1,8 @@
 import './App.css'
 import ClippedDrawer from './components/ClippedDrawer'
 import Account from './pages/Account/Account'
-import Calendar from './pages/Calendar/Calendar'
+//import Calendar from './pages/Calendar/Calendar'
+import Times from './pages/Calendar/Times'
 import Dashboard from './pages/Dashboard/Dashboard'
 import MealsRecomendation from './pages/Meals/MealsRecomendation'
 import Journal from './pages/Journal/Journal'
@@ -14,7 +15,7 @@ function App() {
       <Routes>
         <Route path='/' element={<ClippedDrawer />}>
           <Route index element={<Dashboard />} />
-          <Route path='calendar' element={<Calendar />} />
+          <Route path='calendar' element={<Times />} />
           <Route path='mealsRecommendation' element={<MealsRecomendation />} />
           <Route path='account' element={<Account />} />
           <Route path='journal' element={<Journal />} />

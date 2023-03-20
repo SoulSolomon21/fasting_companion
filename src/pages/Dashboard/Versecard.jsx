@@ -13,6 +13,9 @@ export default function BasicCard() {
   const [ayah, setAyah] = useState('')
 
   useEffect(() => {
+  
+      const getverse= async () => {
+   
     axios.get('https://api.quran.com/api/v4/verses/random?language=en&words=true') //api request using the axios library
       .then(answer => {
         const words = answer.data.verse.words.sort((c, d) => c.position - d.position);
@@ -30,7 +33,14 @@ export default function BasicCard() {
       .catch(error => {
         console.log(error);
       });
+
+    }
+    getverse()
+    const interval =setInterval(getverse,24*60*60*1000)
+    return () => clearInterval(interval);
   }, [])
+
+
 
 
   return (

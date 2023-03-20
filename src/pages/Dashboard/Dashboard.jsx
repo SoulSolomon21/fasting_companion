@@ -1,6 +1,9 @@
 import React from 'react';
 import Versecard from './Versecard';
 
+
+
+
 function Dashboard() {
   const [daysCompleted, setDaysCompleted] = React.useState(0);
 
@@ -13,11 +16,14 @@ function Dashboard() {
     setDaysCompleted(daysCompleted);
   }, []);
 
+
   return (
     <div>
-        <h1>{daysCompleted} days completed out of 30</h1>
-      <Versecard />
     
+      <h1>{daysCompleted} days completed out of 30</h1>
+      <Versecard />
+
+
     </div>
   );
 }
