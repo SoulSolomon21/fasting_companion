@@ -1,17 +1,15 @@
 import React, { createElement, useState } from 'react';
-import "./Journal.css";
-import CreateNote from './CreateNote';
+import './Journal.css';
+import Header from './Header';
 import Notes from './Notes';
 
-
-const Journal = () => {
-
+function Journal(){
   return (
     <div className='Journalmain'>
+      <Header/>
       <Notes/>
-      <CreateNote/>
     </div>
-    )
+  );
 }
 
-export default Journal
+export default Journal;

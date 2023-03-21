@@ -67,5 +67,9 @@
     transform: scale(1.1);
 }
 .Journalmain{
-    background: wheat;
+    background: #af75f1;
+    max-width: 960px;
+    margin: 0px auto;
+    padding: 0px 15px;
+    min-height: 100vh;
 }

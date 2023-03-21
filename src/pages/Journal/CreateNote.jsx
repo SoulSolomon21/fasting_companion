@@ -1,15 +1,22 @@
-import {React} from 'react';
-import './Journal.css';
-function CreateNote({textHandler, saveHandler, inputText}){
-    return(
-        <div className='note'>
-            <textarea cols='10' rows='5' value={inputText}  placeholder='Write....' OnChange={textHandler} maxLength='100'></textarea>
-            <div className='note_footer'>
-                <span className='label'>Left</span>
-                <button className='note_save' onClick ={saveHandler}>Save</button>
-            </div>
-        </div>
-    )
+import { React } from "react";
+function CreateNote({ textHandler, saveHandler, inputText }) {
+  return (
+   <div className="note" style={{ background: "rgba(255, 255, 255, 0)" }}>
+    <textarea
+      cols="10"
+      rows="5"
+      value={inputText}
+      placeholder="Type...."
+      onChange={textHandler}
+      maxLength="100"
+    ></textarea>
+    <div className="note__footer">
+      <span className="label"> left</span>
+      <button className="note__save" onClick={saveHandler}>
+        Save
+      </button>
+    </div>
+   </div>
+  );
 }
-
 export default CreateNote;
