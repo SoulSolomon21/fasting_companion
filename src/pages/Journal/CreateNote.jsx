@@ -9,7 +9,7 @@ function CreateNote({ textHandler, saveHandler, inputText, quoteVerse, verseData
   const charLeft = charLimit - inputText.length
   const charProgress = (charLeft / charLimit) * 100
   return (
-    <div className="note" style={{ background: 'rgba(255,255,255,0)' }}>
+    <div className="note" style={{ background: 'rgba(25,118,210,0.5)' }}>
       <div className="note__verse">
         <a href={`https://quran.com/${surah}?startingVerse=${ayah}`} target="_blank" >
           {verseData}
