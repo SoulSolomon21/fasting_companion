@@ -23,7 +23,7 @@ function Dashboard() {
   return (
     <div>
       <ProgressBar />
-      <h1>{daysCompleted} days completed out of 30</h1>
+      <h1 >{daysCompleted} days completed out of 30</h1>
       <div className="verses">
         <Versecard />
       </div>
