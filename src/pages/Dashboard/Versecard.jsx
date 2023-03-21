@@ -2,7 +2,7 @@ import AspectRatio from '@mui/joy/AspectRatio';
 import Box from '@mui/joy/Box';
 import Card from '@mui/joy/Card';
 import Typography from '@mui/joy/Typography';
-import { useGlobalContext } from '../../Context';
+import { useGlobalContext } from '../../context/Context'
 
 export default function BasicCard() {
   const { surah, ayah, verseText } = useGlobalContext()

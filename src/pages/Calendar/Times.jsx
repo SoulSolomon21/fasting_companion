@@ -1,5 +1,5 @@
 import React from "react";
-import { useGlobalContext } from "../../Context";
+import { useGlobalContext } from "../../context/Context";
 
 function Times() {
 

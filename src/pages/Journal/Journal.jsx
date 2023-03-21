@@ -1,13 +1,13 @@
-import React, { createElement, useState } from 'react';
+import React from 'react';
 import './Journal.css';
 import Header from './Header';
 import Notes from './Notes';
 
-function Journal(){
+function Journal() {
   return (
     <div className='Journalmain'>
-      <Header/>
-      <Notes/>
+      <Header />
+      <Notes />
     </div>
   );
 }
