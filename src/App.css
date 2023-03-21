@@ -11,3 +11,7 @@ body {
   background-size: cover;
   font-family: "Montserrat";
 }
+
+h1 { 
+  color: white;
+}
