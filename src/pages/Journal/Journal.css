@@ -2,7 +2,7 @@
 
 .Journalmain {
     max-width: 960px;
-    /* margin: 0px auto; */
+    margin: 0px auto;
     padding: 0px 15px;
     min-height: 100vh;
 }
@@ -22,7 +22,7 @@
 }
 
 .notes {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     display: grid;
     grid-gap: 1rem;
