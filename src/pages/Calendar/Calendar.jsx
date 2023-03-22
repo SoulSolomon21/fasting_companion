@@ -7,6 +7,7 @@ import startOfWeek from 'date-fns/startOfWeek'
 import getDay from 'date-fns/getDay'
 import enUS from 'date-fns/locale/en-US'
 import { useGlobalContext } from '../../context/Context'
+import { useState, useEffect } from 'react'
 
 const localizer = dateFnsLocalizer({
     format,
@@ -18,15 +19,32 @@ const localizer = dateFnsLocalizer({
     },
 })
 
-const CalendarCard = () => {
 
+const CalendarCard = () => {
+    const [selectedSlot, setSelectedSlot] = useState(null)
     const { prayerTimes } = useGlobalContext()
+
+    function handleSelectSlot(slotInfo) {
+        setSelectedSlot(slotInfo)
+        console.log(selectedSlot);
+        console.log(slotInfo)
+    }
+
+    const today = new Date()
+    useEffect(() => {
+        const dateToday = prayerTimes.filter((date) => {
+            date.event.toDateString() == today.toDateString()
+        })
+        setSelectedSlot(dateToday)
+    }, [])
+
 
     return (
         <div className='calendar-card' style={{ width: '100%' }}>
             <Calendar
                 localizer={localizer}
                 events={prayerTimes}
+                selectable={true}
                 startAccessor="start"
                 endAccessor="end"
                 style={{ height: '100%' }}
@@ -37,7 +55,7 @@ const CalendarCard = () => {
                     agenda: false,
                 }}
                 defaultView='month'
-            // onSelectSlot={}       
+                onSelectSlot={handleSelectSlot}
             />
         </div>
     )

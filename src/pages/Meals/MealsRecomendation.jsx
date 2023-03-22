@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import OverflowCard from './OverflowCard'
 import './meals.css'
 
-const breakfastMeals = 'https://www.themealdb.com/api/json/v1/1/search.php?s=breakfast'
+const breakfastMeals = 'https://www.themealdb.com/api/json/v1/1/search.php?s=chicken'
 const supperMeals = 'https://www.themealdb.com/api/json/v1/1/search.php?s='
 
 const MealsRecomendation = () => {
@@ -46,7 +46,7 @@ const MealsRecomendation = () => {
     <div className="container">
       <section className='breakfastMeals'>
         <h1>Breakfast</h1>
-        {breakfast.map((meal) => {
+        {breakfast.slice(1,5).map((meal) => {
           const {idMeal, strMeal:title,strMealThumb:image,strSource:link} = meal
           return <OverflowCard 
           key={idMeal}
@@ -58,7 +58,7 @@ const MealsRecomendation = () => {
       </section>
       <section className='supperMeals'>
         <h1>Supper</h1>
-        {supper.slice(0,5).map((meal) => {
+        {supper.slice(0,4).map((meal) => {
           const {idMeal, strMeal:title,strMealThumb:image,strSource:link} = meal
           return <OverflowCard 
           key={idMeal}
