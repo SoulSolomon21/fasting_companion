@@ -1,6 +1,7 @@
 .container {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap; /* it controls whetther items are forced onto a single line or multiple line as needed*/
     max-width: 100%;
     margin: 0 auto;
     padding: 0 2rem;
@@ -9,5 +10,12 @@
 
 .breakfastMeal {
     padding: 20px;
+
+
 }
+@media screen and (max-width: 300px) {/*For screens less than 300pixels*/
+    .container {
+      flex-direction: column;
+    }
+  }
     
