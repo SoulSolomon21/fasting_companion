@@ -4,13 +4,16 @@
 }
 
 .calendar_card {
-    width: 80%;
+    width: 70%;
     height: 80%;
 }
 
 .sideBar {
-    width: 20%;
-    /*background-color: cornflowerblue;*/
+    display: flex;
+    color: antiquewhite;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30%;
     background-color: #1976d2;
     margin:39px 10px 0px 10px;
     border: 1px solid black;

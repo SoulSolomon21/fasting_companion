@@ -87,6 +87,7 @@ const AppProvider = ({ children }) => {
         end: new Date(`${readable} ${Maghrib.substr(0,5)}`),
         event: new Date(readable),
     }))
+    
     console.log(prayerTimes);
 
     return <AppContext.Provider value={{

@@ -19,7 +19,6 @@ const localizer = dateFnsLocalizer({
     },
 })
 
-
 const CalendarCard = () => {
     const [selectedSlot, setSelectedSlot] = useState({})
 
