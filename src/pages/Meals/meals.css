@@ -13,7 +13,7 @@
 
 
 }
-@media screen and (max-width: 300px) {/*For screens less than 300pixels*/
+@media screen and (max-width: 280px) {/*For screens less than 300pixels*/
     .container {
       flex-direction: column;
     }
