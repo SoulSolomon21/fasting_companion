@@ -15,7 +15,6 @@ function App() {
           <Route index element={<Dashboard />} />
           <Route path='calendar' element={<Times />} /> {/* add this new Route element */}
           <Route path='mealsRecommendation' element={<MealsRecomendation />} />
-          <Route path='account' element={<Account />} />
           <Route path='journal' element={<Journal />} />
         </Route>
       </Routes>
