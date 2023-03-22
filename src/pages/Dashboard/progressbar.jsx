@@ -19,7 +19,7 @@ const ProgressBar = () => {
 
   return (
     <div className="progress-bar" style={{ border: '2px solid white', borderRadius: '12px', height: '24px' }}>
-      <div className="progress" style={{ width: `${progress}%`, height: '20px', backgroundColor: '#4CAF50', borderRadius: '10px' }}></div>
+      <div className="progress" style={{ width: `${progress}%`, height: '20px', backgroundColor: "white", borderRadius: '10px' }}></div>
     </div>
   );
 };
