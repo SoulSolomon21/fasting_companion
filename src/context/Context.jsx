@@ -7,7 +7,9 @@ const AppProvider = ({ children }) => {
     const [verseText, setVerseText] = useState('');
     const [surah, setSurah] = useState('')
     const [ayah, setAyah] = useState('')
-    const [schedule, setSchedule] = useState([]);
+    const [marchschedule, setSchedulemarch] = useState([]);
+    const [aprilschedule, setScheduleapril] = useState([]);
+  
 
     useEffect(() => {
         axios
@@ -15,12 +17,24 @@ const AppProvider = ({ children }) => {
                 "https://api.aladhan.com/v1/calendarByCity?city=Mukono&country=Uganda&method=1&month=4&year=2023"
             )
             .then((response) => {
-                setSchedule(response.data.data);
+                setSchedulemarch(response.data.data);
                 console.log(response.data.data);
             })
             .catch((error) => {
                 console.log(error);
             });
+        axios
+            .get(
+                "https://api.aladhan.com/v1/calendarByCity?city=Mukono&country=Uganda&method=1&month=3&year=2023"
+            )
+            .then((response) => {
+                setScheduleapril(response.data.data);
+                console.log(response.data.data);
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+         
     }, []);
 
     function fetchVerse() {
@@ -41,6 +55,10 @@ const AppProvider = ({ children }) => {
             .catch(error => {
                 console.log(error);
             });
+
+         
+            
+
     }
 
     const currentDate = new Date().toISOString().slice(0, 10);
@@ -64,7 +82,8 @@ const AppProvider = ({ children }) => {
         ayah,
         surah,
         verseText,
-        schedule
+        marchschedule,
+        aprilschedule
     }}>
         {children}
     </AppContext.Provider>
