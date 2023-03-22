@@ -1,13 +1,26 @@
 .container {
-    display: flex;
-    flex-direction: row;
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 0 2rem;
-    justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  justify-content: space-around;
 }
 
 .breakfastMeal {
-    padding: 20px;
+  padding: 20px;
 }
-    
+
+@media screen and (max-width: 767px) { /* For screens less than 768 pixels */
+  .container {
+      flex-direction: column;
+      padding: 0;
+  }
+  
+  .breakfastMeal {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 10px;
+  }
+}
