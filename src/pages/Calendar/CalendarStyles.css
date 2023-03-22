@@ -249,7 +249,7 @@ button.rbc-input::-moz-focus-inner {
           box-shadow: none;
   margin: 0;
   padding: 2px 5px;
-  background-color: #3174ad;
+  background-color: #cffd02;
   border-radius: 5px;
   color: #fff;
   cursor: pointer;
@@ -389,6 +389,7 @@ button.rbc-input::-moz-focus-inner {
   text-align: right;
 }
 .rbc-date-cell.rbc-now {
+  background-color: #ddd;
   font-weight: bold;
 }
 .rbc-date-cell > a, .rbc-date-cell > a:active, .rbc-date-cell > a:visited {

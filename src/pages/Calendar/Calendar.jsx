@@ -25,9 +25,9 @@ const CalendarCard = () => {
 
     const { prayerTimes } = useGlobalContext()
 
-    function handleSelectSlot(slotInfo) {
-        setSelectedSlot(slotInfo)
-        console.log(selectedSlot);
+    function handleSelectSlot({ start, end }) {
+        // setSelectedSlot(slotInfo)
+        console.log(start, end);
         // console.log(slotInfo)
     }
 
