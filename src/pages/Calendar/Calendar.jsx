@@ -21,13 +21,14 @@ const localizer = dateFnsLocalizer({
 
 
 const CalendarCard = () => {
-    const [selectedSlot, setSelectedSlot] = useState(null)
+    const [selectedSlot, setSelectedSlot] = useState({})
+
     const { prayerTimes } = useGlobalContext()
 
     function handleSelectSlot(slotInfo) {
         setSelectedSlot(slotInfo)
         console.log(selectedSlot);
-        console.log(slotInfo)
+        // console.log(slotInfo)
     }
 
     const today = new Date()
@@ -35,9 +36,8 @@ const CalendarCard = () => {
         const dateToday = prayerTimes.filter((date) => {
             date.event.toDateString() == today.toDateString()
         })
-        setSelectedSlot(dateToday)
+        setSelectedSlot(dateToday[0])
     }, [])
-
 
     return (
         <div className='calendar-card' style={{ width: '100%' }}>
