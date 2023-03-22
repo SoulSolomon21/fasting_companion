@@ -27,6 +27,9 @@ function Dashboard() {
       <div className="verses">
         <Versecard />
       </div>
+      <style>
+     
+      </style>
     </div>
   );
 }
