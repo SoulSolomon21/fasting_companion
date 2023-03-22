@@ -80,12 +80,21 @@ const AppProvider = ({ children }) => {
         const end = new Date('2023-04-21T23:59:59+03:00')
         return days >= begin && days <= end;
     });
+    console.log(final);
+
+    const prayerTimes = final.map(({ timings: { Fajr, Maghrib }, date: { readable } }) => ({
+        start : new Date(`${readable} ${Fajr.substr(0,5)}`),
+        end: new Date(`${readable} ${Maghrib.substr(0,5)}`),
+        event: new Date(readable),
+    }))
+    console.log(prayerTimes);
 
     return <AppContext.Provider value={{
         ayah,
         surah,
         verseText,
-        final
+        final, 
+        prayerTimes
     }}>
         {children}
     </AppContext.Provider>
