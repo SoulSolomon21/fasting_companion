@@ -9,7 +9,6 @@ const AppProvider = ({ children }) => {
     const [ayah, setAyah] = useState('')
     const [marchschedule, setSchedulemarch] = useState([]);
     const [aprilschedule, setScheduleapril] = useState([]);
-  
 
     useEffect(() => {
         axios
@@ -34,7 +33,7 @@ const AppProvider = ({ children }) => {
             .catch((error) => {
                 console.log(error);
             });
-         
+
     }, []);
 
     function fetchVerse() {
@@ -55,10 +54,6 @@ const AppProvider = ({ children }) => {
             .catch(error => {
                 console.log(error);
             });
-
-         
-            
-
     }
 
     const currentDate = new Date().toISOString().slice(0, 10);
@@ -78,12 +73,19 @@ const AppProvider = ({ children }) => {
         }
     }, [currentDate])
 
+    const schedule = aprilschedule.concat(marchschedule);//it matters how you concatenate the array
+    const final = schedule.filter((day) => {//day represents each element in the schedule array
+        let days = new Date(day.date.readable)
+        const begin = new Date('2023-03-23T00:00:00+03:00') //T00:00:00+03:00 is the time zone offset represents the difference in time between Coordinated Universal Time (UTC) and a specific location's time.
+        const end = new Date('2023-04-21T23:59:59+03:00')
+        return days >= begin && days <= end;
+    });
+
     return <AppContext.Provider value={{
         ayah,
         surah,
         verseText,
-        marchschedule,
-        aprilschedule
+        final
     }}>
         {children}
     </AppContext.Provider>
